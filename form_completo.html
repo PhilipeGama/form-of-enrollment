@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <title>Formulário Completo</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/javascript.js"> </script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"> </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //$("#cep").mask("00.000-000");
+            $("#fax").mask("(00) 00000-0000");
+            $("#telefone").mask("(00) 00000-0000");
+    
+        })  
+    </script>
+
+ </head>
+
+<body class="container">
+    <center>
+        <div class="primeira-parte">
+            <br />
+            <p1 class="p1">Formulário de Matrícula</p1>
+            <form action="php/cadastrar.php" method="post" encType="multipart/form-data">
+                <div>
+                    <label for="cpf">1.CPF</label>
+                    <input class="input_tamanho_1" type="text" maxlength="14" id="cpf" name="cpf" />
+                </div>
+                <div>
+                    <label for="numero_seguranca">1.Número de Segurança Social</label>
+                    <input class="input_tamanho_1" type="text" maxlength="9" id="numero_seguranca" name="numero_seguranca" />
+                </div>
+
+                <div>
+                    <label for="nome">2.Seu Nome:</label>
+                    <input type="text" id="nome" placeholder="Nome" name="nome" />
+                    <input type="text" id="sobrenome" placeholder="Último" name="sobrenome" />
+                </div>
+
+                <div>
+                    <label for="mail">3.Endereço Residencial</label>
+                      <input class="input_tamanho_1" type="text" onblur="cep_valida()" id="cep" placeholder="CEP / Código Postal" name="cep"/>
+                    
+                    
+                    <br>
+                    <br>
+                     <input class="margin_1" type="text" id="rua" placeholder="Rua" name="rua"/> 
+                    <input type="text" id="bairro" placeholder="Bairro"  name="bairro"/>
+                    <br>
+                    <br>
+
+                    <input class="margin_1" type="text" id="cidade" placeholder="Cidade" name="cidade"/>
+                   
+                    <input type="text" id="uf" placeholder="Estado" name="uf" />
+                </div>
+                <div>
+                    <label for="name">4.Telefone</label>
+                    <input class="input_tamanho_1" maxlength="15" type="text" id="telefone" name="telefone" />
+                </div>
+
+                <div>
+                    <label for="name">5.Fax</label>
+                    <input class="input_tamanho_1" maxlength="15" type="text" id="fax" name="fax"/>
+                </div>
+
+                <div>
+                    <label for="name">6.Gênero</label>
+                    <input class="check" type="radio" name="gender" id="gender" value="masculino" name="gender" /> Masculino
+                    <input class="check" type="radio" name="gender" id="gender" value="feminino" name="gender"/> Feminino
+                </div>
+
+                <div>
+                    <label for="name">7.Estado Civil</label>
+                    <input class="check" type="radio" id="estado_civil" value="solteiro" name="estado_civil" /> Solteiro
+                    <input class="check" type="radio" id="estado_civil" value="casado" name="estado_civil" /> Casado
+                    <input class="check" type="radio" id="estado_civil" value="viuvo" name="estado_civil" /> Viúvo
+                    <input class="check" type="radio" id="estado_civil" value="divorciado" name="estado_civil" /> Divorciado
+                </div>
+
+                <div>
+                    <label for="mail">8.E-mail:</label>
+                    <input class="input_tamanho_1" type="email" id="email" name="email" />
+                </div>
+
+                <div>
+                    <label for="mail">9.Data de Nascimento</label>
+                    <input class="input_tamanho_1" type="date" id="data_nascimento" value="data_nascimento" name="data_nascimento" />
+                </div>
+
+                <div>
+                    <label for="mail">11.Local de Nascimento</label>
+                    
+                    <input class="input_tamanho_1" type="text" id="local_nascimento" name="local_nascimento" />
+                    <span style="color:gray;font-size:13px;font-weight:bold">(Cidade)</span>
+                </div>
+
+                <div>
+                    <label for="mail">12.Nacionalidade</label>
+                    <input class="input_tamanho_1" type="text" id="nacionalidade" name="nacionalidade" />
+                </div>
+                
+            <div>
+                <label for="name">13.Nível Mais Alto de Educação Completado</label>
+                <div class="margin_1">
+                    <input class="check" type="radio" id="nivel_educacao" value="Ensino Médio Incompleto" name="nivel_educacao"/> Ensino Médio Incompleto 
+                    <br>
+                    <input class="check" type="radio" id="nivel_educacao" value="Ensino Médio Completo ou Equivalente" name="nivel_educacao"/> Ensino Médio Completo ou Equivalente
+                    <br>
+                    <input class="check" type="radio" id="nivel_educacao" value="Superior Incompleto " name="nivel_educacao"/> Superior Incompleto &nbsp; 
+                    <input class="check" type="radio" id="nivel_educacao" value="Superior Completo" name="nivel_educacao"/> Superior Completo  &nbsp; 
+                    <input class="check" type="radio" id="nivel_educacao" value="outro" name="nivel_educacao"/> outro
+                </div>
+            </div>
+
+            <div>
+                <label for="ensino_medio">14.Ensino Médio</label>
+                <textarea id="ensino_medio" name="ensino_medio"></textarea>
+            </div>
+            <div>
+                <label for="ensino_medio">15. Suas Conquistas,honras e prêmios recebidos</label>
+                <textarea id="conquistas" name="conquistas"></textarea>
+            </div>
+            <div>
+                <label for="nome">16.Ocupação Atual</label>
+                <input class="input_tamanho_1" type="text" id="ocupacao" name="ocupacao"/>
+            </div>
+            <div>
+                <label for="nome">17.Referências Pessoais</label>
+                <input class="input_tamanho_1" type="text" id="referencias" name="referencias" />
+            </div>
+            <div>
+                <label for="name">18.Você gostaria de ser considerado uma minoria?</label>
+                <input class="check" type="radio" id="minoria" value="sim" name="minoria"/> Sim 
+                <input class="check" type="radio" id="minoria" value="nao" name="minoria" /> Não
+            </div>
+            <br>
+            <div>
+                <label for="name">19.Se sim,por favor,indique o grupo minoritário que você representa:</label>
+                <input class="check" type="radio" id="tipo_minoria" value="Afroamericano" name="tipo_minoria" /> Afroamericano
+                <input class="check" type="radio" id="tipo_minoria" value="Americano Nativo" /> Americano Nativo
+                <br>
+                <div class="check2">
+                    <input class="check" type="radio" id="tipo_minoria" value="Hispânico" name="tipo_minoria"/> Hispânico 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="check" type="radio" id="tipo_minoria" value="Asiático" name="tipo_minoria"/> Asiático
+                    <br>
+                    <input class="check" type="radio" id="tipo_minoria" value="Alasca" name="tipo_minoria"/> Alasca
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="check" type="radio" id="tipo_minoria" value="Outro" name="tipo_minoria"/> Outro
+                </div>
+            </div>
+            <div>
+                <br>
+                <p1>
+                Por favor,escolha a universidade na qual você gostaria de se matricular.
+                Você terá a opção de alterar a especialidade do seu Doutorado até o momento que você estiver pronto para escrever sua Dissertação.
+                <br>
+                </p1>
+                    <br>
+                    <label for="name">20.Escolha o Doutorado:</label>
+                    <div class="margin_1">
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Artes " name="tipo_doutorado" /> Doutorado em Artes 
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Artes no Ensino Medio" name="tipo_doutorado"/> Doutorado em Artes no Ensino Medio
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Administração de Empresas" name="tipo_doutorado"/> Doutorado em Administração de Empresas
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Educação de Negócios" name="tipo_doutorado"/> Doutorado em Educação de Negócios
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Justiça Criminal" name="tipo_doutorado"/> Doutorado em Justiça Criminal
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Educação" name="tipo_doutorado"/> Doutorado em Educação
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Artes Plátiscas" name="tipo_doutorado"/> Doutorado em Artes Plátiscas
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Estudos Profissionais" name="tipo_doutorado"/> Doutorado em Estudos Profissionais
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Ciências" name="tipo_doutorado"/> Doutorado em Ciências
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Ciência de Enfermagem" name="tipo_doutorado"/> Doutorado em Ciência de Enfermagem
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Ciência da Educação" name="tipo_doutorado"/> Doutorado em Ciência da Educação
+                        </br>
+            
+                        <input class="check" type="radio" id="tipo_doutorado" value="Doutorado em Educação" name="tipo_doutorado"/> Doutorado em Educação
+                        </br> </br>
+                    </div>
+                </div>
+                <div>
+                    <label for="name">Termos e condições</label>
+                    <br>
+                    <textarea readonly class="margin_1 text-area">
+                        Seus termos e condições
+                    </textarea> 
+                </div>
+            
+                <div class="t-input">
+                <input class="check" type="checkbox" id="termos_servico"  name="termos_servico"/> Eu concordo com os termos de serviço.
+                </div>
+            
+                <div>
+                    <strong>Assinatura digital</strong>
+                </div>
+                    <p>AO ASSINAR EU CERTIFICO QUE AS INFORMAÇÃO ACIMA SÃO VERDADEIRAS E CORRETAS AO MEU MELHOR ENTENDIMENTO</p>
+                </div>
+                <br>
+
+                <div class="button">
+                    <div class="assinatura-digital">
+                        <br>
+                        <input type="text" name="assinatura" class="assinatura-form"/>
+                    </div>
+
+                    <button type="submit" class="btn-send" value="cadastrar">Assinar e Enviar o Formulário de Matrícula em Doutorado</button>
+                    
+                </div>
+            </form>
+        </div>
+   </center>
+</body>
+ </html>
