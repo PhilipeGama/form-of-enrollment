@@ -2,7 +2,7 @@
 	$servidor = "localhost";
 	$usuario = "root";
 	$senha = "root";
-	$banco = "form_aluno";
+	$banco = "cadastro_curriculo";
 
 	//Criar a conexão
 	$conn = mysqli_connect($servidor,$usuario,$senha,$banco);

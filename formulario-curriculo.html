@@ -29,7 +29,7 @@
             <form action="php/cadastrar.php" method="post" encType="multipart/form-data">
                 <div>
                     <label for="cpf">1.CPF</label>
-                    <input class="input_tamanho_1" type="text" maxlength="14" id="cpf" name="cpf" />
+                    <input class="input-1" type="text" maxlength="14" id="cpf" name="cpf" />
                 </div>
         
 
@@ -41,30 +41,30 @@
 
                 <div>
                     <label for="mail">3.Endereço Residencial</label>
-                      <input class="input_tamanho_1" type="text" onblur="cep_valida()" id="cep" placeholder="CEP / Código Postal" name="cep"/>
+                      <input class="input-1" type="text" onblur="validar_cep()" id="cep" placeholder="CEP / Código Postal" name="cep"/>
                     
                     
                     <br>
                     <br>
-                     <input class="margin_1" type="text" id="rua" placeholder="Rua" name="rua"/> 
+                     <input class="margin-1" type="text" id="rua" placeholder="Rua" name="rua"/> 
                     <input type="text" id="bairro" placeholder="Bairro"  name="bairro"/>
                     <br>
                     <br>
 
-                    <input class="margin_1" type="text" id="cidade" placeholder="Cidade" name="cidade"/>
+                    <input class="margin-1" type="text" id="cidade" placeholder="Cidade" name="cidade"/>
                    
                     <input type="text" id="uf" placeholder="Estado" name="uf" />
                 </div>
                 <div>
                     <label for="name">4.Telefone</label>
-                    <input class="input_tamanho_1" maxlength="15" type="text" id="telefone" name="telefone" />
+                    <input class="input-1" maxlength="15" type="text" id="telefone" name="telefone" />
                 </div>
 
                 <div>
                     <label for="name">6.Genero</label>
-                    <input class="check" type="radio" name="gender" id="gender" value="masculino" name="gender" /> Masculino
-                    <input class="check" type="radio" name="gender" id="gender" value="feminino" name="gender"/> Feminino
-                    <input class="check" type="radio" name="gender" id="gender" value="feminino" name="gender"/> Outros
+                    <input class="check" type="radio" name="genero" id="genero" value="masculino" name="gender" /> Masculino
+                    <input class="check" type="radio" name="genero" id="genero" value="feminino" name="gender"/> Feminino
+                    <input class="check" type="radio" name="genero" id="genero" value="feminino" name="gender"/> Outros
 
                 </div>
 
@@ -78,29 +78,29 @@
 
                 <div>
                     <label for="mail">8.E-mail:</label>
-                    <input class="input_tamanho_1" type="email" id="email" name="email" />
+                    <input class="input-1" type="email" id="email" name="email" />
                 </div>
 
                 <div>
                     <label for="mail">9.Data de Nascimento</label>
-                    <input class="input_tamanho_1" type="date" id="data_nascimento" value="data_nascimento" name="data_nascimento" />
+                    <input class="input-1" type="date" id="data_nascimento" value="data_nascimento" name="data_nascimento" />
                 </div>
 
                 <div>
                     <label for="mail">11.Local de Nascimento</label>
                     
-                    <input class="input_tamanho_1" type="text" id="local_nascimento" name="local_nascimento" />
+                    <input class="input-1" type="text" id="local_nascimento" name="local_nascimento" />
                     <span style="color:gray;font-size:13px;font-weight:bold">(Cidade)</span>
                 </div>
 
                 <div>
                     <label for="mail">12.Nacionalidade</label>
-                    <input class="input_tamanho_1" type="text" id="nacionalidade" name="nacionalidade" />
+                    <input class="input-1" type="text" id="nacionalidade" name="nacionalidade" />
                 </div>
                 
             <div>
                 <label for="name">13.Nível Mais Alto de Educação</label>
-                <div class="margin_1">
+                <div class="margin-1">
                     <input class="check" type="radio" id="nivel_educacao" value="Ensino Médio Incompleto" name="nivel_educacao"/> Ensino Médio Incompleto 
                     <br>
                     <input class="check" type="radio" id="nivel_educacao" value="Ensino Médio Completo ou Equivalente" name="nivel_educacao"/> Ensino Médio Completo ou Equivalente
@@ -113,25 +113,25 @@
 
             <div>
                 <label for="ensino_medio">14.Formações</label>
-                <textarea id="ensino_medio" name="ensino_medio"></textarea>
+                <textarea id="formacoes" name="formacoes"></textarea>
             </div>
             <div>
                 <label for="ensino_medio">15. Experiências</label>
-                <textarea id="conquistas" name="conquistas"></textarea>
+                <textarea id="experiencias" name="experiencias"></textarea>
             </div>
             <div>
                 <label for="nome">16.Ocupação Atual</label>
-                <input class="input_tamanho_1" type="text" id="ocupacao" name="ocupacao"/>
+                <input class="input-1" type="text" id="ocupacao_atual" name="ocupacao_atual"/>
             </div>
             <div>
                 <label for="nome">17.Referências Pessoais</label>
-                <input class="input_tamanho_1" type="text" id="referencias" name="referencias" />
+                <input class="input-1" type="text" id="referencias" name="referencias" />
             </div>
 
             <br>
             <br>
             <br>
-            <div class="margin_1" >
+            <div class="margin-1" >
                 <button type="submit" class="btn-send" value="cadastrar">Enviar currículo</button>
 
             </div>

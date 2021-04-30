@@ -147,7 +147,7 @@ button {
     background-color: white;
 }
 
-.button_1{
+.button-1{
     margin-left: .5em;
     padding: 10px 10px;
 }
@@ -162,11 +162,11 @@ button {
     border-radius: 1em;
 }
 
-.margin_1{
+.margin-1{
     margin-left: 153px;
     margin-top:-40px;
 }
 
-.input_tamanho_1{
+.input-1{
     width: 500px;
 }
