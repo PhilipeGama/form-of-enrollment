@@ -9,7 +9,7 @@
 	mysqli_set_charset($conn,"utf8");
 	//Verificar a conexão
 	if($conn == true){
-		echo "Conexão realizada com sucesso";
+		echo "Conexão realizada com sucesso<br>";
 	}
 	else{
 		die("Falha na conexão: ". mysqli_connect_error());

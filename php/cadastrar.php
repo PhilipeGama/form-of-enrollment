@@ -5,7 +5,7 @@ include "conexao.php";
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $nome_completo = $dados['nome']." ".$dados["sobrenome"];
 
-var_dump($dados); 
+//var_dump($dados); 
 
 $sql_1 = "INSERT INTO candidato(cpf,nome,telefone,genero,estado_civil,email,data_nascimento,
 local_nascimento,nacionalidade,nivel_educacao,formacoes,experiencias,ocupacao_atual,
@@ -27,18 +27,24 @@ referencias) VALUES (
 )";
 
 
-var_dump($sql_1); 
+//var_dump($sql_1); 
 
 $result = mysqli_query($conn,$sql_1);
 
-var_dump($result);
+if ($result) {
+	echo "Candidato cadastrado com sucesso<br>";
+} else {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+//var_dump($result);
 
 
 
 
 if($result){
 	$_SESSION['id_candidato'] = mysqli_insert_id($conn);
-	var_dump("teste".$_SESSION['id_candidato']);
+	//var_dump("teste".$_SESSION['id_candidato']);
 	$sql_2 = "INSERT INTO endereco(id_candidato,cep,rua,bairro,cidade,uf) VALUES (
 		'".$_SESSION['id_candidato']."',
 		'".$dados['cep']."',
@@ -47,10 +53,17 @@ if($result){
 		'".$dados['cidade']."',
 		'".$dados['uf']."'
 	)";
-	var_dump($sql_2);
+	//var_dump($sql_2);
 	$result = mysqli_query($conn,$sql_2);
 }
 
+if ($result) {
+	echo "Endereço cadastrado com sucesso<br>";
+} else {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 
 
 ?>
