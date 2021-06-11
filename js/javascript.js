@@ -3,7 +3,7 @@
  *   como cidade, logradouro, etc.
  */
 
-function cep_valida(){
+function validar_cep(){
     CEP = $("#cep").val();
 
     $.ajax({

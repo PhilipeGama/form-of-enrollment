@@ -18,7 +18,7 @@ body{
     background-color:#fff;
     width:850px;
     padding:10px;
-    height:2100px;
+    height:1300px;
     border-radius:3px;
     text-align:left;
     box-shadow: 0px 0px 3px 2px rgb(228, 227, 227);
@@ -97,20 +97,11 @@ textarea {
 
 }
 
-.assinatura-digital{
-    border:1px solid gray;
-    width:600px;
-    height:80px;
-    font-size:20px;
-    border-radius:3px;
-    margin-top:-175px;
-    margin-left:-420px;
-}
 
 .btn-send{
     position:relative;
     top:30px;
-    background-color:gray;
+    background-color:rgb(19, 90, 223);
     color:#fff;
     border-radius:3px;
     font-weight:bold;
@@ -118,11 +109,7 @@ textarea {
     left:-80px;
 }
 
-.assinatura-form{
-    border:transparent;
-    border-bottom:1px solid #000;
-    width:550px;
-}
+
 
 .text-area {
     border-radius:4px;
@@ -161,7 +148,7 @@ button {
     background-color: white;
 }
 
-.button_1{
+.button-1{
     margin-left: .5em;
     padding: 10px 10px;
 }
@@ -176,11 +163,11 @@ button {
     border-radius: 1em;
 }
 
-.margin_1{
+.margin-1{
     margin-left: 153px;
     margin-top:-40px;
 }
 
-.input_tamanho_1{
+.input-1{
     width: 500px;
 }
